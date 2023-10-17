@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
+
+body {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-family: "Pixelify Sans";
+  background-color: #ffbb4b;
+}
+
+h1 {
+  color: red;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 50px;
+  font-size: 80px;
+}
+
+p {
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.left-blocker {
+    width: auto;
+    height: 310px;
+    background-color: #ffbb4b;
+    flex-grow: 1;
+    z-index: 1;
+}
+
+.right-blocker {
+    width: auto;
+    height: 310px;
+    flex-grow: 1;
+    background-color: #ffbb4b;
+    z-index: 1;
+}
+
+#smoking {
+  width: 48px;
+  height: 48px;
+  background-image: url("/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/smoking.png");
+  animation-name: smoking;
+  animation-duration: 700ms;
+  animation-timing-function: steps(9);
+  animation-iteration-count: infinite;
+  margin: 10px auto;
+  margin-bottom: 0px;
+  scale: 1.6;
+}
+
+@keyframes smoking {
+  to {
+    background-position: -432px;
+  }
+}
+
+#game-area {
+  width: 700px;
+  height: 300px;
+  border: 2px solid black;
+  margin: 30px auto;
+  display: flex;
+  background-image: url(background.jpg);
+  background-size: cover;
+}
+
+#player {
+  position: relative;
+  top: 238px;
+  left: 330px;
+  width: 48px;
+  height: 48px;
+  background-image: url("/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/walking.png");
+  scale: 1.6;
+}
+
+.walking {
+  animation: walking;
+  animation-duration: 600ms;
+  animation-timing-function: steps(9);
+  animation-iteration-count: infinite;
+}
+
+@keyframes walking {
+  to {
+    background-position: -432px;
+  }
+}
+
+#enemy {
+  width: 20px;
+  height: 20px;
+  background-image: url(/tunna.png);
+  background-size: cover;
+  position: relative;
+  top: 280px;
+  left: 800px;
+  animation: enemy 4s linear infinite;
+}
+@keyframes enemy {
+  0% {
+    left: 800px;
+  }
+  100% {
+    left: -200px;
+    rotate: -2000deg;
+  }
+
+}
+
+button {
+  width: 300px;
+  height: 50px;
+  border: 5px solid fuchsia;
+}
+
+.jump {
+  animation: jump 500ms linear;
+  background-position: -288px;
+}
+@keyframes jump {
+  0% {
+    top: 238px;
+  }
+  30% {
+    top: 188px;
+  }
+  70% {
+    top: 188px;
+  }
+  100% {
+    top: 238px;
+  }
+}
+
