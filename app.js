@@ -58,4 +58,4 @@ let trackScore = setInterval(function () {
     currentScore += 1;
     scoreEl.innerHTML = currentScore;
   }
-}, 1);
+}, 10);
