@@ -1,6 +1,10 @@
 let playerEl = document.querySelector("#player");
 let enemyEl = document.querySelector("#enemy");
 let jumpBtn = document.querySelector("button");
+let gameAreaEl = document.querySelector("#game-area")
+
+
+
 
 function jump() {
   if (playerEl.classList != "jump") {
