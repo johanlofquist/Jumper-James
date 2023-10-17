@@ -5,9 +5,9 @@ let gameAreaEl = document.querySelector("#game-area");
 let gameOverEl = document.querySelector("#game-over");
 let explosionEl = document.querySelector("#explosion");
 let scoreEl = document.querySelector("#score");
+let latestScoreEl = document.querySelector("#latest-score")
 
 function startGame() {
-  scoreEl.innerHTML = "0"
   gameOverEl.style.display = "none";
   playerEl.classList.remove("idling");
   playerEl.classList.add("walking");
@@ -40,6 +40,8 @@ let checkDead = setInterval(function () {
     setTimeout(function () {
       explosionEl.style.display = "none";
     }, 950);
+    latestScoreEl.innerHTML = "LATEST SCORE : " + scoreEl.innerText
+    scoreEl.innerHTML = "0"
   }
 }, 10);
 

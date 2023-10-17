@@ -64,7 +64,8 @@ body {
   width: 700px;
   height: 300px;
   border: 2px solid black;
-  margin: 20px auto;
+  margin: 10px auto;
+  margin-top: 0;
   background-image: url(background.jpg);
   background-size: cover;
   position: relative;
@@ -83,6 +84,12 @@ body {
     right: 20px;
     top: 10px;
     font-size: 60px;
+}
+
+#latest-score {
+    margin-top: 20px;
+    font-size: 25px;
+    margin-bottom: 5px;
 }
 
 #explosion {
