@@ -7,11 +7,12 @@ let explosionEl = document.querySelector("#explosion");
 let scoreEl = document.querySelector("#score");
 
 function startGame() {
+  scoreEl.innerHTML = "0"
   gameOverEl.style.display = "none";
   playerEl.classList.remove("idling");
   playerEl.classList.add("walking");
   setTimeout(function () {
-    enemyEl.classList.add("enemy-start");
+    enemyEl.classList.add("enemy-start"); 
   }, 3000);
 }
 
