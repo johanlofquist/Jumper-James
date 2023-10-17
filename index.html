@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>
+    <h1 id="title">
       Jumper James
       <div id="smoking"></div>
     </h1>
+    <button onclick="startGame()">LETS GO!</button>
     <div class="container">
-      <div class="left-blocker"></div>
-      <div id="game-area" onclick="jump()">
-        <div id="player" class="walking"></div>
-        <div id="enemy"></div>
+        <div class="left-blocker"></div>
+        <div id="game-area" onclick="jump()">
+            <h1 id="game-over">GAME OVER</h1>
+            <p id="score">0</p>
+            <div id="player" class="idling"></div>
+            <div id="enemy"></div>
+            <div id="explosion"></div>
       </div>
       <div class="right-blocker"></div>
     </div>
-    <!-- <button onclick="jump()">JUMP</button> -->
-    <p>Press spacebar to jump!</p>
+    <p id="instructions">Press spacebar or your mouse to jump!</p>
   </body>
   <script src="app.js"></script>
 </html>

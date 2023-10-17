@@ -8,36 +8,36 @@ body {
   background-color: #ffbb4b;
 }
 
-h1 {
+#title {
   color: red;
   text-shadow: 1px 1px 1px black;
   margin-top: 50px;
   font-size: 80px;
 }
 
-p {
-    font-size: 25px;
+#instructions {
+  font-size: 25px;
 }
 
 .container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .left-blocker {
-    width: auto;
-    height: 310px;
-    background-color: #ffbb4b;
-    flex-grow: 1;
-    z-index: 1;
+  width: auto;
+  height: 310px;
+  background-color: #ffbb4b;
+  flex-grow: 1;
+  z-index: 1;
 }
 
 .right-blocker {
-    width: auto;
-    height: 310px;
-    flex-grow: 1;
-    background-color: #ffbb4b;
-    z-index: 1;
+  width: auto;
+  height: 310px;
+  flex-grow: 1;
+  background-color: #ffbb4b;
+  z-index: 1;
 }
 
 #smoking {
@@ -63,19 +63,44 @@ p {
   width: 700px;
   height: 300px;
   border: 2px solid black;
-  margin: 30px auto;
-  display: flex;
+  margin: 20px auto;
   background-image: url(background.jpg);
   background-size: cover;
+  position: relative;
+}
+
+#game-over {
+    font-size: 100px;
+    color: red;
+    text-shadow: 1px 1px 1px black;
+    display: none;
+}
+
+#score {
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 60px;
+}
+
+#explosion {
+    position: absolute;
+    top: 210px;
+    left: 290px;
+    width: 120px;
+    height: 120px;
+    background-image: url(explosion.gif);
+    background-size: cover;
+    display: none;
 }
 
 #player {
-  position: relative;
+  position: absolute;
   top: 238px;
   left: 330px;
   width: 48px;
   height: 48px;
-  background-image: url("/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/walking.png");
   scale: 1.6;
 }
 
@@ -84,6 +109,14 @@ p {
   animation-duration: 600ms;
   animation-timing-function: steps(9);
   animation-iteration-count: infinite;
+  background-image: url("/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/walking.png");
+}
+.idling {
+  animation: walking;
+  animation-duration: 900ms;
+  animation-timing-function: steps(9);
+  animation-iteration-count: infinite;
+  background-image: url("/Cowboy (Animated Pixel Art)/Animation Sprite Sheets (PNG)/CowBoyIdle.png");
 }
 
 @keyframes walking {
@@ -97,9 +130,12 @@ p {
   height: 20px;
   background-image: url(/tunna.png);
   background-size: cover;
-  position: relative;
+  position: absolute;
   top: 280px;
   left: 800px;
+}
+
+.enemy-start {
   animation: enemy 4s linear infinite;
 }
 @keyframes enemy {
@@ -110,13 +146,14 @@ p {
     left: -200px;
     rotate: -2000deg;
   }
-
 }
 
 button {
-  width: 300px;
+  width: 100px;
   height: 50px;
-  border: 5px solid fuchsia;
+  background-color: #ffbb4b;
+  box-shadow: 0 0 2px black;
+  border-radius: 5px;
 }
 
 .jump {
@@ -137,4 +174,5 @@ button {
     top: 238px;
   }
 }
+
 

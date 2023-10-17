@@ -1,15 +1,23 @@
 let playerEl = document.querySelector("#player");
 let enemyEl = document.querySelector("#enemy");
 let jumpBtn = document.querySelector("button");
-let gameAreaEl = document.querySelector("#game-area")
+let gameAreaEl = document.querySelector("#game-area");
+let gameOverEl = document.querySelector("#game-over");
+let explosionEl = document.querySelector("#explosion");
+let scoreEl = document.querySelector("#score");
 
-
-
+function startGame() {
+  gameOverEl.style.display = "none";
+  playerEl.classList.remove("idling");
+  playerEl.classList.add("walking");
+  setTimeout(function () {
+    enemyEl.classList.add("enemy-start");
+  }, 3000);
+}
 
 function jump() {
   if (playerEl.classList != "jump") {
     playerEl.classList.add("jump");
-
   }
   setTimeout(function () {
     playerEl.classList.remove("jump");
@@ -23,10 +31,14 @@ let checkDead = setInterval(function () {
   let enemyLeft = parseInt(
     window.getComputedStyle(enemyEl).getPropertyValue("left")
   );
-  if (enemyLeft < 319 && enemyLeft > 270 && playerTop >= 218) {
-    enemyEl.style.animation = "none";
-    enemyEl.style.display = "none";
-    alert("You lose!");
+  if (enemyLeft < 363 && enemyLeft > 325 && playerTop >= 218) {
+    enemyEl.classList.remove("enemy-start");
+    gameOverEl.style.display = "block";
+    playerEl.classList.remove("walking");
+    explosionEl.style.display = "block";
+    setTimeout(function () {
+      explosionEl.style.display = "none";
+    }, 950);
   }
 }, 10);
 
@@ -35,3 +47,14 @@ document.body.addEventListener("keydown", function (event) {
     jump();
   }
 });
+
+let trackScore = setInterval(function () {
+  let enemyLeft = parseInt(
+    window.getComputedStyle(enemyEl).getPropertyValue("left")
+  );
+  if (enemyLeft < 350 && enemyLeft > 340) {
+    let currentScore = parseInt(scoreEl.innerText);
+    currentScore += 1;
+    scoreEl.innerHTML = currentScore;
+  }
+}, 1);
