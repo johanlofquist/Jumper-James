@@ -40,7 +40,6 @@ body {
   z-index: 1;
 }
 
-
 #smoking {
   width: 48px;
   height: 48px;
@@ -72,35 +71,35 @@ body {
 }
 
 #game-over {
-    font-size: 100px;
-    color: red;
-    text-shadow: 1px 1px 1px black;
-    display: none;
+  font-size: 100px;
+  color: red;
+  text-shadow: 1px 1px 1px black;
+  display: none;
 }
 
 #score {
-    margin: 0;
-    position: absolute;
-    right: 20px;
-    top: 10px;
-    font-size: 60px;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 60px;
 }
 
 #latest-score {
-    margin-top: 20px;
-    font-size: 25px;
-    margin-bottom: 5px;
+  margin-top: 20px;
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
 #explosion {
-    position: absolute;
-    top: 210px;
-    left: 290px;
-    width: 120px;
-    height: 120px;
-    background-image: url(explosion.gif);
-    background-size: cover;
-    display: none;
+  position: absolute;
+  top: 210px;
+  left: 290px;
+  width: 120px;
+  height: 120px;
+  background-image: url(explosion.gif);
+  background-size: cover;
+  display: none;
 }
 
 #player {
@@ -159,7 +158,7 @@ body {
 #start-btn {
   width: 140px;
   height: 50px;
-  background-color: #BE5F1F;
+  background-color: #be5f1f;
   border-radius: 5px;
   border: 1px solid rgb(173, 173, 173);
   transition: linear 50ms;
@@ -191,5 +190,3 @@ body {
     top: 238px;
   }
 }
-
-

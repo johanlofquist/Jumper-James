@@ -5,14 +5,14 @@ let gameAreaEl = document.querySelector("#game-area");
 let gameOverEl = document.querySelector("#game-over");
 let explosionEl = document.querySelector("#explosion");
 let scoreEl = document.querySelector("#score");
-let latestScoreEl = document.querySelector("#latest-score")
+let latestScoreEl = document.querySelector("#latest-score");
 
 function startGame() {
   gameOverEl.style.display = "none";
   playerEl.classList.remove("idling");
   playerEl.classList.add("walking");
   setTimeout(function () {
-    enemyEl.classList.add("enemy-start"); 
+    enemyEl.classList.add("enemy-start");
   }, 3000);
 }
 
@@ -40,8 +40,8 @@ let checkDead = setInterval(function () {
     setTimeout(function () {
       explosionEl.style.display = "none";
     }, 950);
-    latestScoreEl.innerHTML = "LATEST SCORE : " + scoreEl.innerText
-    scoreEl.innerHTML = "0"
+    latestScoreEl.innerHTML = "LATEST SCORE : " + scoreEl.innerText;
+    scoreEl.innerHTML = "0";
   }
 }, 10);
 
