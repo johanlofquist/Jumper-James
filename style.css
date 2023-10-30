@@ -86,9 +86,13 @@ body {
 }
 
 #latest-score {
-  margin-top: 20px;
   font-size: 25px;
-  margin-bottom: 5px;
+  position: absolute;
+  margin: 3px 3px;
+}
+#high-score {
+  font-size: 25px;
+  margin: 3px 3px;
 }
 
 #explosion {
@@ -164,6 +168,7 @@ body {
   transition: linear 50ms;
   font-family: "Pixelify Sans";
   font-size: 30px;
+  margin-bottom: 10px;
 }
 #start-btn:hover {
   scale: 1.1;
